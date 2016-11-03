@@ -81,8 +81,8 @@ form .btn:focus {
  }
 
  h3 {
-   /*text-shadow: -2px 2px 5px #222;*/
    -webkit-text-stroke-width: 1px;
    -webkit-text-stroke-color: #222;
    font-size: 2em;
+   letter-spacing: 1px;
  }
