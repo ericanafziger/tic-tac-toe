@@ -58,8 +58,8 @@ $(document).ready(function() {
       $("#playerOneWins").text(playerOne.winCount);
       $("#playerTwoWins").text(playerTwo.winCount);
       $("#playerOneName").addClass("chosen");
-      $("#colorPicker").delay(400).fadeIn(800);
-      $("#nameInputs").fadeOut(200);
+      $("#colorPicker").delay(700).show("slide", { direction: "right" }, 1000);
+      $("#nameInputs").hide("slide", { direction: "left" }, 1000);
     } else {
       alert("Fill out all the forms, please!")
       $("body").addClass("uhoh");
@@ -73,8 +73,8 @@ $(document).ready(function() {
     $(".playerOneName").css("color", playerOne.colors);
     $(".playerTwoName").css("color", playerTwo.colors);
 
-    $("#game").delay(400).fadeIn(800);
-    $("#colorPicker").fadeOut(200);
+    $("#game").delay(700).show("slide", { direction: "right" }, 1000);
+    $("#colorPicker").hide("slide", { direction: "left" }, 1000);
   })
   console.log(playerOne.names);
 
