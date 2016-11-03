@@ -33,6 +33,10 @@ h1 {
   text-align: center;
 }
 
+h1:hover {
+  color: #A569BD;
+}
+
 .chosen {
   text-decoration: underline;
 }
@@ -40,6 +44,29 @@ h1 {
 #topRow {
   margin-bottom: 50px;
 }
-/*.btn {
-  background-color: #999;
-}*/
+
+form {
+  width: 500px;
+  margin: 0 auto;
+}
+
+form .btn {
+  color: #fff;
+  background-color: #A569BD;
+  border-color: #A569BD;
+}
+
+form .btn:hover {
+  color: #fff;
+  background-color: #5bc0de;
+  border-color: #46b8da;
+}
+
+form .btn:focus {
+  color: #fff;
+  background-color: #31b0d5;
+  border-color: #1b6d85;
+}
+ .uhoh {
+   background-color: #FADBD8;
+ }

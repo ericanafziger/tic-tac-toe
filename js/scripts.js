@@ -1,6 +1,6 @@
 // Business End
 var allValues = [0, 0, 0, 0, 0, 0, 0, 0, 0];
-var winningCombos = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 4, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [2, 4, 6]];
+// var winningCombos = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 4, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [2, 4, 6]];
 
 var Player = function(name, symbol, winCount) {
   this.names = name;
@@ -8,8 +8,8 @@ var Player = function(name, symbol, winCount) {
   this.winCount = winCount;
 }
 
-var playerOne = new Player("Player One", "X", 0);
-var playerTwo = new Player("Player Two", "O", 0);
+var playerOne = new Player("", "X", 0);
+var playerTwo = new Player("", "O", 0);
 
 var currentPlayer = playerOne;
 
@@ -48,14 +48,21 @@ $(document).ready(function() {
     playerTwo.names = $("input#playerTwoNameInput").val();
     playerOne.symbol = $("input#playerOneSymbolInput").val();
     playerTwo.symbol = $("input#playerTwoSymbolInput").val();
-    debugger;
-    $("#playerOneName").text(playerOne.names);
-    $("#playerTwoName").text(playerTwo.names);
-    $("#playerOneWins").text(playerOne.winCount);
-    $("#playerTwoWins").text(playerTwo.winCount);
-    $("#playerOneName").addClass("chosen");
-    $("#game").delay(400).fadeIn(800);
-    $("#nameInputs").fadeOut(200);
+
+    if (playerOne.names !== "" && playerTwo.names !== "" && playerOne.symbol !== "" && playerTwo.symbol !== "") {
+      debugger;
+      $("body").removeClass("uhoh");
+      $("#playerOneName").text(playerOne.names);
+      $("#playerTwoName").text(playerTwo.names);
+      $("#playerOneWins").text(playerOne.winCount);
+      $("#playerTwoWins").text(playerTwo.winCount);
+      $("#playerOneName").addClass("chosen");
+      $("#game").delay(400).fadeIn(800);
+      $("#nameInputs").fadeOut(200);
+    } else {
+      alert("Fill out all the forms, please!")
+      $("body").addClass("uhoh");
+    }
   });
   console.log(playerOne.names);
 
