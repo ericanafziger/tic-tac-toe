@@ -85,7 +85,8 @@ $(document).ready(function() {
     }
     $("#winnerIs").text("");
     var buttonValue = parseInt($(this).val());
-    $(this).text(currentPlayer.symbol);
+    $(this).css("background-color", currentPlayer.colors);
+    $(this).css("border-color", currentPlayer.colors);
     allValues[buttonValue] = currentPlayer.symbol;
     checkWinner();
     // $(this).off("click");
