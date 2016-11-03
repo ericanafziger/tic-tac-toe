@@ -2,14 +2,15 @@
 var allValues = [0, 0, 0, 0, 0, 0, 0, 0, 0];
 // var winningCombos = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 4, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [2, 4, 6]];
 
-var Player = function(name, symbol, winCount) {
+var Player = function(name, symbol, winCount, colors) {
   this.names = name;
   this.symbol = symbol;
   this.winCount = winCount;
+  this.colors = colors;
 }
 
-var playerOne = new Player("", "X", 0);
-var playerTwo = new Player("", "O", 0);
+var playerOne = new Player("", "X", 0, "#fff");
+var playerTwo = new Player("", "O", 0, "#000");
 
 var currentPlayer = playerOne;
 
@@ -46,24 +47,31 @@ $(document).ready(function() {
     event.preventDefault();
     playerOne.names = $("input#playerOneNameInput").val();
     playerTwo.names = $("input#playerTwoNameInput").val();
-    playerOne.symbol = $("input#playerOneSymbolInput").val();
-    playerTwo.symbol = $("input#playerTwoSymbolInput").val();
 
-    if (playerOne.names !== "" && playerTwo.names !== "" && playerOne.symbol !== "" && playerTwo.symbol !== "") {
+    if (playerOne.names !== "" && playerTwo.names !== "") {
       debugger;
       $("body").removeClass("uhoh");
-      $("#playerOneName").text(playerOne.names);
-      $("#playerTwoName").text(playerTwo.names);
+      $(".playerOneName").text(playerOne.names);
+      $(".playerTwoName").text(playerTwo.names);
       $("#playerOneWins").text(playerOne.winCount);
       $("#playerTwoWins").text(playerTwo.winCount);
       $("#playerOneName").addClass("chosen");
-      $("#game").delay(400).fadeIn(800);
+      $("#colorPicker").delay(400).fadeIn(800);
       $("#nameInputs").fadeOut(200);
     } else {
       alert("Fill out all the forms, please!")
       $("body").addClass("uhoh");
     }
   });
+
+  $("#colorPicker").submit(function(event) {
+    event.preventDefault();
+    playerOne.colors = $("input#colorPlayerOne").val();
+    playerTwo.colors = $("input#colorPlayerTwo").val();
+
+    $("#game").delay(400).fadeIn(800);
+    $("#colorPicker").fadeOut(200);
+  })
   console.log(playerOne.names);
 
   $(".col-xs-4 .btn").click(function() {
