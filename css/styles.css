@@ -75,3 +75,7 @@ form .btn:focus {
  .uhoh {
    background-color: #FADBD8;
  }
+
+ label {
+   font-size: 1.8em;
+ }

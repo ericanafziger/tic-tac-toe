@@ -26,7 +26,8 @@ function checkWinner() {
   if (allValues[0] === currentPlayer.symbol && allValues[1] === currentPlayer.symbol && allValues[2] === currentPlayer.symbol || allValues[3] === currentPlayer.symbol && allValues[4] === currentPlayer.symbol && allValues[5] === currentPlayer.symbol || allValues[6] === currentPlayer.symbol && allValues[7] === currentPlayer.symbol && allValues[8] === currentPlayer.symbol || allValues[0] === currentPlayer.symbol && allValues[4] === currentPlayer.symbol && allValues[8] === currentPlayer.symbol || allValues[0] === currentPlayer.symbol && allValues[3] === currentPlayer.symbol && allValues[6] === currentPlayer.symbol || allValues[1] === currentPlayer.symbol && allValues[4] === currentPlayer.symbol && allValues[7] === currentPlayer.symbol || allValues[2] === currentPlayer.symbol && allValues[5] === currentPlayer.symbol && allValues[8] === currentPlayer.symbol || allValues[2] === currentPlayer.symbol && allValues[4] === currentPlayer.symbol && allValues[6] === currentPlayer.symbol) {
     $("#winnerIs").text(currentPlayer.names + " wins!");
     allValues = [0, 0, 0, 0, 0, 0, 0, 0, 0];
-    $(".btn").text("");
+    $(".btn").css("background-color", "#5bc0de");
+    $(".btn").css("border-color", "#46b8da");
     currentPlayer.winCount += 1;
     $("#playerOneWins").text(playerOne.winCount);
     $("#playerTwoWins").text(playerTwo.winCount);
@@ -53,6 +54,7 @@ $(document).ready(function() {
       $("body").removeClass("uhoh");
       $(".playerOneName").text(playerOne.names);
       $(".playerTwoName").text(playerTwo.names);
+
       $("#playerOneWins").text(playerOne.winCount);
       $("#playerTwoWins").text(playerTwo.winCount);
       $("#playerOneName").addClass("chosen");
@@ -68,6 +70,8 @@ $(document).ready(function() {
     event.preventDefault();
     playerOne.colors = $("input#colorPlayerOne").val();
     playerTwo.colors = $("input#colorPlayerTwo").val();
+    $(".playerOneName").css("color", playerOne.colors);
+    $(".playerTwoName").css("color", playerTwo.colors);
 
     $("#game").delay(400).fadeIn(800);
     $("#colorPicker").fadeOut(200);
@@ -88,6 +92,7 @@ $(document).ready(function() {
     $(this).css("background-color", currentPlayer.colors);
     $(this).css("border-color", currentPlayer.colors);
     allValues[buttonValue] = currentPlayer.symbol;
+    // window.setTimeout(checkWinner, 2000);
     checkWinner();
     // $(this).off("click");
     switchPlayer();
