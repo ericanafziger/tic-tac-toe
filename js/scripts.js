@@ -44,6 +44,8 @@ $(document).ready(function() {
     event.preventDefault();
     playerOne.names = $("input#playerOneNameInput").val();
     playerTwo.names = $("input#playerTwoNameInput").val();
+    playerOne.symbol = $("input#playerOneSymbolInput").val();
+    playerTwo.symbol = $("input#playerTwoSymbolInput").val();
     debugger;
     $("#playerOneName").text(playerOne.names);
     $("#playerTwoName").text(playerTwo.names);
