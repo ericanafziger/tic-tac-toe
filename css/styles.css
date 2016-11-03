@@ -1,20 +1,41 @@
 .btn, .col-xs-4 {
-  width: 100px;
-  height: 100px;
+  width: 250px;
+  height: 250px;
   border-radius: 0px;
+  font-size: 2.8em;
+  color: #F39C12;
+}
+.btn:hover {
+  color: #F39C12;
+}
+
+.btn:focus {
+  color: #F39C12;
 }
 
 .row {
-  width: 300px;
-  margin: 0;
+  width: 750px;
+  margin: 0 auto;
+
 }
 
 .container {
   text-align: center;
-  align-content: center;
+}
+h1 {
+  margin-bottom: 2%;
+  margin-top: 5%;
+  font-size: 5em;
+  color: #F39C12;
 }
 
-/*button {
-    position: absolute;
-    top: 50%;
+.chosen {
+  text-decoration: underline;
+}
+
+#topRow {
+  margin-bottom: 50px;
+}
+/*.btn {
+  background-color: #999;
 }*/
