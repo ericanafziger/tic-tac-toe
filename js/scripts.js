@@ -21,6 +21,13 @@ function switchPlayer() {
   currentPlayer = playerOne;
   }
 }
+function checkWinner() {
+  if (allValues[0] === currentPlayer.symbol && allValues[1] === currentPlayer.symbol && allValues[2] === currentPlayer.symbol || allValues[3] === currentPlayer.symbol && allValues[4] === currentPlayer.symbol && allValues[5] === currentPlayer.symbol || allValues[6] === currentPlayer.symbol && allValues[7] === currentPlayer.symbol && allValues[8] === currentPlayer.symbol || allValues[0] === currentPlayer.symbol && allValues[4] === currentPlayer.symbol && allValues[8] === currentPlayer.symbol || allValues[0] === currentPlayer.symbol && allValues[3] === currentPlayer.symbol && allValues[6] === currentPlayer.symbol || allValues[1] === currentPlayer.symbol && allValues[4] === currentPlayer.symbol && allValues[7] === currentPlayer.symbol || allValues[2] === currentPlayer.symbol && allValues[5] === currentPlayer.symbol && allValues[8] === currentPlayer.symbol || allValues[2] === currentPlayer.symbol && allValues[4] === currentPlayer.symbol && allValues[6] === currentPlayer.symbol) {
+    alert(currentPlayer.names + " wins!");
+    allValues = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+    $(".btn").text("");
+  }
+}
 
 
 // User Interface Logic
@@ -33,8 +40,8 @@ $(document).ready(function() {
     var buttonValue = parseInt($(this).val());
     $(this).text(currentPlayer.symbol);
     allValues[buttonValue] = currentPlayer.symbol;
+    checkWinner();
     switchPlayer();
     console.log(allValues);
   });
-
 });
