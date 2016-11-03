@@ -26,7 +26,9 @@ function checkWinner() {
     $("#winnerIs").text(currentPlayer.names + " wins!");
     allValues = [0, 0, 0, 0, 0, 0, 0, 0, 0];
     $(".btn").text("");
-    // $(".col-xs-4 .btn").attach("click");
+    currentPlayer.winCount += 1;
+    $("#playerOneWins").text(playerOne.winCount);
+    $("#playerTwoWins").text(playerTwo.winCount);
   } else if (allValues[0] !== 0 && allValues[1] !== 0 && allValues[2] !== 0 && allValues[3] !== 0 && allValues[4] !== 0 && allValues[5] !== 0 && allValues[6] !== 0 && allValues[7] !== 0 && allValues[8] !== 0) {
     $("#winnerIs").text("You're both losers!");
     allValues = [0, 0, 0, 0, 0, 0, 0, 0, 0];
@@ -49,6 +51,8 @@ $(document).ready(function() {
     debugger;
     $("#playerOneName").text(playerOne.names);
     $("#playerTwoName").text(playerTwo.names);
+    $("#playerOneWins").text(playerOne.winCount);
+    $("#playerTwoWins").text(playerTwo.winCount);
     $("#playerOneName").addClass("chosen");
     $("#game").delay(400).fadeIn(800);
     $("#nameInputs").fadeOut(200);
