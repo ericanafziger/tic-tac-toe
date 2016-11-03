@@ -8,8 +8,21 @@
     <title>Tic-Tac-Toe</title>
   </head>
   <body>
-    <div class="container">
-      <h1>Tic-Tac-Toe!</h1>
+    <h1>Tic-Tac-Toe!</h1>
+    <div class="container" id="nameInputs">
+      <form>
+        <div class="form-group">
+          <label for="playerOneName">Enter name for player one:</label>
+          <input type="text" name="playerOneName" id="playerOneNameInput" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="playerTwoName">Enter name for player two:</label>
+          <input type="text" name="playerTwoName" id="playerTwoNameInput" class="form-control">
+        </div>
+        <button type="submit" name="button" class="btn btn-success">Let's Play!</button>
+      </form>
+    </div>
+    <div class="container" id="game">
       <div class="row" id="topRow">
         <div class="col-xs-5">
           <h3><span id="playerOneName"></span></h3>

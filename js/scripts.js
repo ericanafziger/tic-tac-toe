@@ -39,9 +39,19 @@ function checkWinner() {
 
 $(document).ready(function() {
   debugger;
-  $("#playerOneName").text(playerOne.names)
-  $("#playerTwoName").text(playerTwo.names)
-  $("#playerOneName").addClass("chosen");
+
+  $("#nameInputs").submit(function(event){
+    event.preventDefault();
+    playerOne.names = $("input#playerOneNameInput").val();
+    playerTwo.names = $("input#playerTwoNameInput").val();
+    debugger;
+    $("#playerOneName").text(playerOne.names);
+    $("#playerTwoName").text(playerTwo.names);
+    $("#playerOneName").addClass("chosen");
+    $("#game").delay(400).fadeIn(800);
+    $("#nameInputs").fadeOut(200);
+  });
+  console.log(playerOne.names);
 
   $(".col-xs-4 .btn").click(function() {
     debugger;
