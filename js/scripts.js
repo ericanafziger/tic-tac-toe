@@ -34,7 +34,8 @@ function checkWinner() {
   } else if (allValues[0] !== 0 && allValues[1] !== 0 && allValues[2] !== 0 && allValues[3] !== 0 && allValues[4] !== 0 && allValues[5] !== 0 && allValues[6] !== 0 && allValues[7] !== 0 && allValues[8] !== 0) {
     $("#winnerIs").text("You're both losers!");
     allValues = [0, 0, 0, 0, 0, 0, 0, 0, 0];
-    $(".btn").text("");
+    $(".btn").css("background-color", "#5bc0de");
+    $(".btn").css("border-color", "#46b8da");
   }
 }
 
