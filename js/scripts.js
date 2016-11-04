@@ -93,9 +93,8 @@ $(document).ready(function() {
     $(this).css("background-color", currentPlayer.colors);
     $(this).css("border-color", currentPlayer.colors);
     allValues[buttonValue] = currentPlayer.symbol;
-    // window.setTimeout(checkWinner, 2000);
+
     checkWinner();
-    // $(this).off("click");
     switchPlayer();
     console.log(allValues);
   });
