@@ -1,28 +1,29 @@
-# _{Tic-Tac-Taco}_
+# Tic-Tac-Taco
 
-#### _{You play tic-tac-toe}, {November 3rd, 2016}_
+#### _You play tic-tac-toe, {November 3rd, 2016_
 
-#### By _**{Erica Nafziger, Austin Blain}**_
+#### By _**Erica Nafziger, Austin Blain**_
 
 ## Description
 
-_{This application allows the user to play tic-tac-toe; choosing a color and inputting their name.}_
+_This application allows the user to play tic-tac-toe; choose a color and input their name._
 
 ## Setup/Installation Requirements
-
-* Open in browser (preferably Google Chrome!)
+* Clone repo from GitHub
+* cd tic-tac-toe in terminal 
+* Open index.html in browser
 
 ## Known Bugs
 
-_{You can click on a previously selected square and override other players choice- or waste your turn reinstating your own previous choice.}_
+_You can click on a previously selected square and override other players choice- or waste your turn reinstating your own previous choice._
 
 
 ## Technologies Used
 
-_{HTML, CSS, BootStrap, JavaScript, JQuery, JQuery-UI}_
+_HTML, CSS, BootStrap, JavaScript, JQuery, JQuery-UI_
 
 ### License
 
-*{Open Source?}*
+*MIT*
 
-Copyright (c) 2016 **_{Erica Nafziger, Austin Blain}_**
+Copyright (c) 2016 **_Erica Nafziger, Austin Blain_**
