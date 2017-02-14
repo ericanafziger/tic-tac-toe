@@ -1,4 +1,4 @@
-# Tic-Tac-Taco
+# Tic-Tac-Toe
 
 #### _You play tic-tac-toe, November 3rd, 2016_
 
