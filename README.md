@@ -1,6 +1,6 @@
 # Tic-Tac-Taco
 
-#### _You play tic-tac-toe, {November 3rd, 2016_
+#### _You play tic-tac-toe, November 3rd, 2016_
 
 #### By _**Erica Nafziger, Austin Blain**_
 
@@ -9,6 +9,8 @@
 _This application allows the user to play tic-tac-toe; choose a color and input their name._
 
 ## Setup/Installation Requirements
+* View in browser at [https://ericanafziger.github.io/tic-tac-toe/](https://ericanafziger.github.io/tic-tac-toe/)
+OR
 * Clone repo from GitHub
 * cd tic-tac-toe in terminal 
 * Open index.html in browser
